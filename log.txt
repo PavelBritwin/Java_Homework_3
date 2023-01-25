@@ -1,0 +1,12 @@
+џэт. 25, 2023 7:53:37 PM Java_homework_2.Task1 main
+INFO: 2 4 4 6 4 3 4 6 5 7 
+џэт. 25, 2023 7:53:37 PM Java_homework_2.Task1 main
+INFO: 2 4 4 4 3 4 6 5 6 7 
+џэт. 25, 2023 7:53:37 PM Java_homework_2.Task1 main
+INFO: 2 4 4 3 4 4 5 6 6 7 
+џэт. 25, 2023 7:53:37 PM Java_homework_2.Task1 main
+INFO: 2 4 3 4 4 4 5 6 6 7 
+џэт. 25, 2023 7:53:37 PM Java_homework_2.Task1 main
+INFO: 2 3 4 4 4 4 5 6 6 7 
+џэт. 25, 2023 7:53:37 PM Java_homework_2.Task1 main
+INFO: 2 3 4 4 4 4 5 6 6 7 
