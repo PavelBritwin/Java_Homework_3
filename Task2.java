@@ -1,51 +1,24 @@
-package Java_homework_2;
+// Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее ариф. из этого списка
 
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+package Java_homework_3;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Task2 {
-    public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
-        JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader("C:\\Users\\anohi\\Task2.json"));
-        JSONArray arr = (JSONArray)obj;
-        for (Object o : arr)
+    public static void main(String[] args) {
+        Random rnd = new Random();
+        ArrayList<Integer> l = new ArrayList<Integer>();
+        Integer sum = 0;
+        for (Integer item = 0; item < 10; item++)
         {
-            JSONObject person = (JSONObject)o;
-            StringBuilder sb = new StringBuilder();
-            sb.append("Student ");
-            sb.append((String)person.get("surname"));
-            sb.append(" obtained ");
-            sb.append((String)person.get("estimation"));
-            sb.append(" in ");
-            sb.append((String)person.get("subject"));
-
-            System.out.println(sb);
+            l.add(rnd.nextInt(1,15));
+            sum += l.get(item);
         }
-        Map<String,String> map = new HashMap<String,String>();
-        map.put("surname", "Sidorov");
-        map.put("estimation", "3");
-        map.put("subject", "geography");
-        JSONObject newStudent = new JSONObject();
-        newStudent.putAll(map);
-        arr.add(newStudent);
-        try (FileWriter file = new FileWriter("C:\\Users\\anohi\\Task2.json")) {
-            for (Object m : arr)
-            {
-                file.write(m.toString());
-            }
-            file.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.println(l);
+        System.out.println("Максимальный элемент списка: "+ Collections.max(l));
+        System.out.println("Минимальный элемент списка: "+ Collections.min(l));
+        System.out.println("Среднее арифметическое списка: "+ (double)sum/l.size());
     }
 }
